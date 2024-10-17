@@ -117,7 +117,7 @@ class Game:
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
 
         self.bg_image = pygame.image.load('background.png')
-        self.sound_manager = SoundManager()  # Initialize SoundManager
+        self.sound_manager = SoundManager() 
 
         self.tank = Tank(self.screen_width // 2, self.screen_height // 2, self.sound_manager)
         self.enemies = []
@@ -137,7 +137,7 @@ class Game:
                     bullet.active = False
                     self.tank.booms.append(Boom(enemy.x + enemy.width // 2, enemy.y + enemy.width // 2))
                     self.enemies.remove(enemy)
-                    self.sound_manager.play_boom()  # Play explosion sound
+                    self.sound_manager.play_boom() 
                     self.tank.score += 1  
 
     def run(self):
