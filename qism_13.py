@@ -6,8 +6,8 @@ import os
 class SoundManager:
     def __init__(self):
         pygame.mixer.init()
-        self.boom_sound = pygame.mixer.Sound('boom.mp3')
-        self.shoot_sound = pygame.mixer.Sound('shoot.mp3')
+        self.boom_sound = pygame.mixer.Sound('./src/boom.mp3')
+        self.shoot_sound = pygame.mixer.Sound('./src/shoot.mp3')
 
     def play_boom(self):
         pygame.mixer.Sound.play(self.boom_sound)
@@ -116,7 +116,7 @@ class Game:
         self.screen_height = 600
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
 
-        self.bg_image = pygame.image.load('background.png')
+        self.bg_image = pygame.image.load('./src/background.jpg')
         self.sound_manager = SoundManager() 
 
         self.tank = Tank(self.screen_width // 2, self.screen_height // 2, self.sound_manager)

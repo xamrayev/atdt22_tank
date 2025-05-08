@@ -175,8 +175,8 @@ class Game:
         self.screen = pygame.display.set_mode((self.screen_width, self.screen_height))
 
         # orqa fon 
-        self.bg_image = pygame.image.load('background.png')
-        self.sound = pygame.mixer.Sound('boom.mp3')
+        self.bg_image = pygame.image.load('./src/background.jpg')
+        self.sound = pygame.mixer.Sound('./src/boom.mp3')
 
 
         # self.bg_color = (0, 0, 0)
